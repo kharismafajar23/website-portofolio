@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/favicon_porto" />
+
+    <!-- Box icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Alpine JS -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <!-- Email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('kZ7-nBJCflU_rnPLQ');
+    </script>
+
+    <!-- HTML Meta Tags -->
+    <title>Kharisma Fajar - Portofolio Frontend Developer</title>
+    <meta
+      name="description"
+      content="Halo perkenalkan saya Kharisma seorang Junior Frontend Developer. Memiliki ketertarikan dengan dunia visual & pemrograman. Senang jika dapat membuat suatu program."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://portofolio.demanganesia.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kharisma Fajar - Portofolio Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Halo perkenalkan saya Kharisma seorang Junior Frontend Developer. Memiliki ketertarikan dengan dunia visual & pemrograman. Senang jika dapat membuat suatu program."
+    />
+    <meta property="og:image" content="https://portofolio.demanganesia.com/img/Banner%20-%20Kharisma%20Fajar.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="portofolio.demanganesia.com" />
+    <meta property="twitter:url" content="https://portofolio.demanganesia.com/img/Banner%20-%20Kharisma%20Fajar.png" />
+    <meta name="twitter:title" content="Kharisma Fajar - Portofolio Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Halo perkenalkan saya Kharisma seorang Junior Frontend Developer. Memiliki ketertarikan dengan dunia visual & pemrograman. Senang jika dapat membuat suatu program."
+    />
+    <meta name="twitter:image" content="https://portofolio.demanganesia.com/img/Banner%20-%20Kharisma%20Fajar.png" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+    </style>
+  </head>
+
+  <body class="selection:bg-kuning selection:text-black2" x-data="alpineData()">
+    <!-- Header Start -->
+    <header class="px-4 bg-header_bg transition duration-300 backdrop-blur-md sticky top-0 z-[1000]">
+      <div class="container flex justify-between items-center mx-auto py-5" x-data="{ mobileMenu : false}">
+        <a href="" class="text-3xl font-bold text-black self-center">Kharisma<span class="text-kuning">.</span></a>
+        <img class="md:hidden" src="./img/mobile_menu.svg" x-on:click="mobileMenu = !mobileMenu" />
+
+        <!-- Mobile Menu -->
+        <nav
+          class="lg:hidden py-2 absolute top-[75px] left-0 right-0 bg-white backdrop-blur-md shadow-lg"
+          x-show="mobileMenu"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 scale-90"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-90"
+        >
+          <div class="flex flex-col justify-around">
+            <a href="#" class="mobile_menu">
+              <span class="mobile_menu_text">Beranda</span>
+            </a>
+            <a href="#tentang" class="mobile_menu">
+              <span class="mobile_menu_text">Tentang</span>
+            </a>
+            <a href="#project" class="mobile_menu">
+              <span class="mobile_menu_text">Project</span>
+            </a>
+            <a href="#kontak" class="mobile_menu">
+              <span class="mobile_menu_text">Kontak</span>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex gap-6 font-medium">
+          <a href="#">Beranda</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#project">Project</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+
+        <a href="#kontak" class="hidden lg:block font-medium px-5 py-2 bg-kuning rounded">Hubungi</a>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <!-- Hero Section Start -->
+      <section>
+        <div class="container mx-auto py-10 lg:py-16 px-4 text-center">
+          <img src="./img/kharisma.png" alt="" class="rounded-full w-[120px] md:w-[170px] mb-6 lg:mb-7 mx-auto" />
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-main font-medium lg:mb-1">
+            Halo, saya <span class="bg-gradient-to-br from-kuning1 to-kuning2 bg-clip-text text-transparent">Kharisma Fajar</span>
+          </h1>
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-main font-medium mb-4 lg:mb-7">Jr. Front End Developer</h3>
+          <p class="lg:text-lg md:w-3/4 mx-auto text-gray text-sm md:text-base leading-normal mb-7">
+            Memiliki ketertarikan dengan dunia visual dan pemrograman. Gemar untuk membuat tampilan sebuah website serta menganalisa
+            struktur tampilan suatu website.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+            <a
+              href="https://drive.google.com/file/d/19mGYuWhL_GwQ8T2c_HGvTS9yPZ33aQMT/view?usp=sharing"
+              class="btn_primary py-3 md:px-8 w-full md:w-fit"
+              target="_blank"
+              >Download CV</a
+            >
+            <a href="#tentang" class="btn_secondary py-3 md:px-8 w-full md:w-fit">Tentang Saya</a>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Tentang Section Start -->
+      <section id="tentang" class="py-16">
+        <div class="container mx-auto px-4 md:px-10 flex flex-col gap-6">
+          <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12 md:col-span-6">
+              <h2 class="section_title">Tentang Saya</h2>
+              <p class="section_desc text-justify">
+                Memiliki ketertarikan dengan dunia visual dan pemrograman. Gemar untuk membuat tampilan sebuah website serta menganalisa
+                struktur tampilan suatu website. Saya senang jika dapat membuat suatu program untuk membantu orang lain dan membantu suatu
+                proses bisnis.
+              </p>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <h3 class="font-main form-medium text-2xl mb-4">Temukan saya di :</h3>
+              <div class="flex flex-col gap-4">
+                <div class="flex gap-4">
+                  <a href="https://web.facebook.com/kharisma.fajar.77" class="button_sosmed" target="_blank"
+                    ><i class="bx bxl-facebook-square"></i>Facebook</a
+                  >
+                  <a href="https://www.instagram.com/kharisma_fajar23" class="button_sosmed" target="_blank"
+                    ><i class="bx bxl-instagram-alt"></i>Instagram</a
+                  >
+                </div>
+                <div class="flex gap-4">
+                  <a href="https://github.com/kharismafajar23" class="button_sosmed" target="_blank"><i class="bx bxl-github"></i>Github</a>
+                  <a href="https://www.linkedin.com/in/kharisma-fajar-054117185/" class="button_sosmed" target="_blank"
+                    ><i class="bx bxl-linkedin-square"></i>Linkedin</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tentang Section End -->
+
+      <!-- Portofolio section Start -->
+      <section id="project" class="bg-gray_bg py-14 lg:py-28">
+        <div class="container mx-auto flex flex-col items-center px-4 md:px-10">
+          <h2 class="section_title">Portofolio</h2>
+          <p class="section_desc text-center">Berikut projek yang pernah saya kerjakan dan sertifikat yang pernah saya dapat</p>
+
+          <!-- Button Category Porto and Sertifikat -->
+          <div class="flex gap-3 mb-10">
+            <button
+              class="font-medium text-base rounded px-5 py-2 transition duration-300"
+              @click="toggle = 0"
+              :class="toggle == 0 ? 'bg-kuning text-[#000000]' : 'text-gray'"
+            >
+              Portofolio
+            </button>
+            <button
+              class="font-medium text-base rounded px-5 py-2 transition duration-300"
+              @click="toggle = 1"
+              :class="toggle == 1 ? 'bg-kuning text-[#000000]' : 'text-gray'"
+            >
+              Sertifikat
+            </button>
+          </div>
+
+          <!-- Portofolio -->
+          <div
+            class="grid grid-cols-12 gap-4 lg:gap-7"
+            x-show="toggle == 0"
+            x-data="portofolioData()"
+            x-init="initData()"
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+          >
+            <template x-for="(portofolio, index) in daftarPortofolio">
+              <div class="portofolio_card col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                <div class="overflow-hidden w-full">
+                  <img :src="portofolio.gambar" alt="" class="w-full hover:scale-110 transition duration-200" loading="lazy" />
+                </div>
+                <div class="flex flex-col p-5">
+                  <h3 class="font-main font-medium text-lg" x-text="portofolio.judul">Nama Disini</h3>
+                  <div class="flex gap-4">
+                    <a class="text-gray text-base flex gap-1 items-center group" :href="portofolio.link_demo" target="_blank"
+                      >Demo<i class="bx bx-right-arrow-alt group-hover:translate-x-1 transition duration-300 text-kuning"></i
+                    ></a>
+                    <span class="text-gray text-base flex gap-1 items-center group cursor-pointer modal_btn" x-on:click="showModal()"
+                      >Detail<i class="bx bx-info-circle group-hover:translate-x-1 transition duration-300 text-kuning"></i
+                    ></span>
+                  </div>
+
+                  <!-- Pop up Portofolio -->
+                  <div class="portofolio_modal hidden">
+                    <div class="portofolio_modal_area">
+                      <i class="bx bxs-x-circle close_modal cursor-pointer absolute right-6 top-5 text-kuning text-2xl"></i>
+                      <h4 class="font-main font-semibold text-center text-xl mb-4" x-text="portofolio.judul"></h4>
+                      <img class="rounded-lg mb-4" :src="portofolio.gambar" alt="" loading="lazy" />
+                      <p class="text-sm text-gray mb-2 text-justify" x-text="portofolio.deskripsi"></p>
+                      <a
+                        class="inline-flex gap-1 px-4 py-2 rounded bg-kuning hover:bg-kuning2 duration-300 transition items-center mb-4 group"
+                        x-show="portofolio.link_github"
+                        :href="portofolio.link_github"
+                        target="_blank"
+                      >
+                        <span class="font-main text-sm font-medium">Github</span>
+                        <i class="bx bxl-github group-hover:translate-x-1 transition duration-300"></i>
+                      </a>
+                      <h5 class="font-medium font-main text-base mb-1">Teknologi</h5>
+                      <div class="flex flex-row gap-2">
+                        <template x-for="teknologi in portofolio.daftarTeknologi">
+                          <img class="p-2 w-12 bg-slate-100 rounded-full" :src="teknologi.link_tech" alt="" />
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Sertifikat -->
+          <div
+            class="grid grid-cols-12 gap-4 lg:gap-7"
+            x-show="toggle == 1"
+            x-data="sertifikatData()"
+            x-init="initData()"
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+          >
+            <template x-for="sertifikat in daftarSertifikat">
+              <div class="sertifikat_card col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                <div class="overflow-hidden w-full">
+                  <img :src="sertifikat.link_gambar" alt="" class="w-full hover:scale-110 transition duration-200" loading="lazy" />
+                </div>
+                <div class="flex flex-col p-5">
+                  <h3 class="font-main font-medium text-lg" x-text="sertifikat.nama_sertifikat">Nama Disini</h3>
+                  <div class="flex gap-4">
+                    <a class="text-gray text-base flex gap-1 items-center group" :href="sertifikat.link_credential" target="_blank"
+                      >Credential<i class="bx bx-info-circle group-hover:translate-x-1 transition duration-300 text-kuning"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <!-- Portofolio section End -->
+
+      <!-- Kontak Section Start -->
+      <section id="kontak" class="py-16">
+        <div class="container mx-auto px-4 md:px-10">
+          <h2 class="section_title text-center">Kontak</h2>
+          <p class="section_desc text-center">Silahkan menghubungi melalui kontak di bawah</p>
+          <div class="flex flex-col md:flex-row gap-16 lg:gap-6 mt-14">
+            <div class="w-full md:w-1/2 flex flex-col">
+              <span class="font-main font-medium text-lg text-center mb-6">Hubungi melalui</span>
+              <div class="kontak_card_container">
+                <template x-for="kontak in kontakInfo">
+                  <div class="kontak_card">
+                    <i class="kontak_card_icon" :class="kontak.icon"></i>
+                    <h3 class="kontak_card_title" x-text="kontak.title"></h3>
+                    <span class="kontak_card_info" x-text="kontak.info">restuistyo@gmail.com</span>
+                    <div class="kontak_card_link_area group">
+                      <a class="kontak_card_link" :href="kontak.link">Hubungi sekarang</a>
+                      <i class="bx bx-right-arrow-alt link_icon"></i>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col">
+              <span class="font-main font-medium text-lg text-center mb-6">Form Pesan</span>
+              <form class="form_area" onsubmit="event.preventDefault()">
+                <!-- Input Nama -->
+                <div class="form_input_area">
+                  <label class="label_input" for="input_nama">Nama</label>
+                  <input class="input_area" id="input_nama" type="text" placeholder="Masukkan nama anda disini" required />
+                </div>
+                <!-- Input Email -->
+                <div class="form_input_area">
+                  <label class="label_input" for="input_email">Email</label>
+                  <input class="input_area" id="input_email" type="email" placeholder="Masukkan email anda disini" required />
+                </div>
+                <!-- Input Pesan -->
+                <div class="form_input_area">
+                  <label class="label_input" for="input_pesan">Pesan</label>
+                  <textarea id="input_pesan" cols="30" rows="6" placeholder="Masukkan pesan anda disini"></textarea>
+                </div>
+
+                <input
+                  class="font-main font-medium text-black rounded px-5 py-3 mt-5 bg-kuning hover:bg-kuning2 transition duration-300 cursor-pointer"
+                  type="submit"
+                  value="Kirim Pesan"
+                  x-on:click="kirimPesan()"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Kontak Section End -->
+    </main>
+
+    <!-- Footer Start -->
+    <footer class="py-12 bg-gradient-to-br from-kuning1 to-kuning2">
+      <div class="container mx-auto text-center">
+        <h1 class="text-3xl font-main font-medium mb-10">Kharisma</h1>
+        <nav class="flex gap-5 justify-center mb-8">
+          <a class="text-base" href="#tentang">Tentang</a>
+          <a href="#project">Projek</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+        <div class="flex gap-2 justify-center mb-14">
+          <template x-for="sosialMedia in daftarSosialMedia">
+            <a
+              :href="sosialMedia.link"
+              class="text-kuning rounded px-2 py-1 bg-black hover:text-black hover:bg-amber-100 transition duration-300"
+              target="_blank"
+            >
+              <i class="text-lg" :class="sosialMedia.icon"></i
+            ></a>
+          </template>
+        </div>
+        <span class="text-sm" x-text="'Kharisma Fajar &#169; ' + new Date().getFullYear() + ' All right reserved'"></span>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
